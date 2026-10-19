@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>job application form</title>
+  <link rel="stylesheet" href="css/all.css">
+  
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8e8dc, #f5dada);
+    color: #333;
+    min-height: 100vh;
+    padding: 25px 15px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 15px 0 25px;
+    color: #a94444;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(100, 40, 40, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.detail.one {
+    display: flex;
+    gap: 25px;
+}
+
+.parent {
+    flex: 1;
+    min-width: 0;
+}
+
+.parent label,
+.text label,
+.file label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    color: #444;
+    text-transform: capitalize;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.wrapper input,
+.wrapper select,
+.text input,
+.text select,
+.text textarea {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #e3d5d5;
+    border-radius: 9px;
+    padding: 10px 14px;
+    background: #fffdfd;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #333;
+    transition: .25s;
+}
+
+.wrapper input {
+    padding-right: 42px;
+}
+
+.wrapper select {
+    padding-right: 42px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.wrapper i {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c76b6b;
+    pointer-events: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #cd5c5c;
+    box-shadow: 0 0 0 3px rgba(205, 92, 92, .12);
+    background: white;
+}
+
+.text {
+    display: flex;
+    gap: 25px;
+}
+
+.box {
+    flex: 1;
+    min-width: 0;
+}
+
+.box input,
+.box select {
+    width: 100%;
+}
+
+.text textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.file {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.file label {
+    margin: 0;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+}
+
+.wrap input {
+    width: 100%;
+    padding: 12px;
+    border: 1px dashed #cd5c5c;
+    border-radius: 9px;
+    background: #fff8f7;
+    font-size: 13px;
+}
+
+.wrap i {
+    display: none;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    background: transparent;
+}
+
+.btn input {
+    width: 190px;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #cd5c5c;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn input:hover {
+    background: #a94444;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(205, 92, 92, .25);
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    .detail.one,
+    .text {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    .btn input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+}
+</style>
+
+</head>
+<body>
+  <h2>Job Application Form</h2>
+  <form>
+  <div class=container>
+    <div class="detail one">
+	<div class=parent>
+      <label>First Name</label>
+	   <div class=wrapper>
+     <i class="fa-solid fa-user"></i> <input type="text" placeholder="Enter ur first name">
+	 </div>
+	 </div>
+	 <div class=parent>
+            <label>Last Name</label>
+			<div class=wrapper>
+     <i class="fa-solid fa-user"></i> <input type="text" placeholder="Enter ur last name">
+	 </div>
+	 </div>
+	 </div>
+    <div class="detail one">
+	<div class=parent>
+      <label>Email </label>
+	  <div class=wrapper><i class="fa-solid fa-envelope"></i>
+      <input type="email" placeholder="Enter email" required></div></div>
+	  <div class=parent>
+<label>job role</label><div class=wrapper><i class="fa-solid fa-graduation-cap"></i>
+      <select>
+        <option></option>
+        <option>Frontend developer</option>
+        <option>Backend developer</option>
+        <option>Full stack developer</option>
+        <option>Graphic designer</option>
+        <option>Seo</option>
+        <option>UI and UX design</option>
+        <option>Cybersecurity</option>
+      </select> 
+    </div>
+	</div>
+	</div>
+    <div class=text>
+	<div class=box>
+      <label>Email Address</label>
+      <textarea></textarea>
+	</div></div>
+    <div class=text>
+	<div class=box>
+      <label for=city>City</label>
+      <select id=city>
+        <option selected></option>
+        <optgroup label=sindh>
+        <option>karachi</option>
+        <option>mirpurkhas</option>
+        <option>hyderabad</option>
+        </optgroup>
+          <optgroup label=punjab>
+        <option>islamabad</option>
+        <option>rawalpindi</option>
+        <option>lahore</option>
+          </optgroup>
+            <optgroup label=north>
+        <option>muree</option>
+        <option>hunza</option>
+              <option>naran</option>
+            </optgroup>
+      </select> </div>
+	  <div class=box>
+            <label>Education</label>
+      <select>
+        <option selected=""></option>
+        <option>Primary</option>
+        <option>High</option>
+        <option>intermediate</option>
+        <option>bacherlors</option>
+        <option>masters</option>
+        <option>phd</option>
+      </select> 
+    </div>
+	</div>
+    <div class=text>
+	<div class=box>
+      <label>Date Of Birth</label>
+      <input type="date">
+	  </div>
+	  <div class=box>
+      <label>Age</label>
+      <input type="number" min="25" max="45">
+    </div></div>
+    <div class=file>
+      <label>Upload Cv</label>
+     <div class=wrap> <input type="file" accept=".pdf,excel"><i class="fa-solid fa-file" ></i></div>
+    </div>
+    <button class=btn>
+      <input type="submit" value="Apply Now">
+    </button>
+	</form>
+  
+  
+</body>
+</html>
